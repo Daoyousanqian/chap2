@@ -10,10 +10,12 @@ d_ptr_to_char  a1, b1;                 // eg, equal to ******** char * a1, b1; *
 
 int const  random1;
 const int  random2;
- 
+
+int initNum = 1212; 
+
 int *pi ;                // an ordinary pointer;
 int const *pci ;    //  can change pointer's value but not allow to change the value it points **** *pci = 30; wrong **** pci = & num3; right ********
-int *const cpi ;    //  allow the change the vlaue it point but not allow to chage pointer's value;
+int *const cpi =& initNum;    //  allow the change the vlaue it point but not allow to chage pointer's value;
 int const *const cpci ;  // both do not allow; 
 
 
@@ -38,11 +40,24 @@ int main(void){
 	pci = &num2;
 //	cpi = &num3;     // it will hint some error assignment of read-only variable ‘cpi’
 //	cpci = &num4;   //  assignment of read-only variable ‘cpci’
-   
+
+ // ****************************** the example of int const * cpi *******************************************//  
 	printf("the number of pi is  :%d\n", *pi);
-	printf("the number of pi is  :%d\n", *pci);
+	printf("the number of pci is  :%d\n", *pci);
 	pci = &num3;
-	printf("the number of pi is  :%d\n", *pci);
+	printf("the number of pci is  :%d\n", *pci);
+//  *pci = num3;	                                                  // can not change the value it points but pointers value could be changed  
+//	printf("the number of pci is  :%d\n", *pci);
+
+// ****************************** the example of int const * cpi *******************************************//
+	printf("the number of cpi is  :%d\n", *cpi);
+	*cpi = 3434;                                           
+	printf("the number of cpi is  :%d\n", *cpi);
+	
+//	cpi = & num4;   assignment of read-only variable ‘cpi’
+//	printf("the number of cpi is  :%d\n", *cpi);
+
+// ****************************** the example of int const * cpi *******************************************//	
 	
 	 char a[] = "asad"; // the difference between '  ' for char and  "  " is for string. 
 	
