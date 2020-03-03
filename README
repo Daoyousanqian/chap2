@@ -1,2 +1,4 @@
 This is the chapter 2 exercise
 
+int *a, b, c; only a would be the pointer 
+int *a, *b, *c are the correct way to declare 3 pointr 
