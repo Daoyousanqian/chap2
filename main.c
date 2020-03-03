@@ -1,6 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+typedef char  *ptr_to_char   // delcares the identifier ptr_to_char to be a new name for the type pointer to character.
+ptr_to_char  pointer1 ;   //declare pointer1 as the pointer to character
+
+#define d_ptr_to_char  char *    // when use define, it only replace the definition.
+d_ptr_to_char  a1, b1;                 // eg, equal to ******** char * a1, b1; ************* so only a is the pointer to character
+
+
+int const  random1;
+const int  random2;
+
 int incrementPlus1(int a);
 int neg(int a);
 
