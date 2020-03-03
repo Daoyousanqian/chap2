@@ -11,10 +11,10 @@ d_ptr_to_char  a1, b1;                 // eg, equal to ******** char * a1, b1; *
 int const  random1;
 const int  random2;
  
-int *pi;
-int const *pci;
-int *const cpi;
-int const *const cpci;
+int *pi ;
+int const *pci ;
+int *const cpi ;
+int const *const cpci ;
 
 
 
@@ -29,11 +29,21 @@ int main(void){
 	int enterNum;
 	int brace = 0;
 	int ch;
+	int num1 = 10;
+	int num2 = 11;
+	int num3 = 12;
+	int num4 = 13;
+	int num5 = 14;
+	pi = &num1;
+	pci = &num2;
+//	cpi = &num3;     // it will hint some error assignment of read-only variable ‘cpi’
+//	cpci = &num4;   //  assignment of read-only variable ‘cpci’
+   
+	printf("the number of pi is  :%d\n", *pi);
+	printf("the number of pi is  :%d\n", *pci);
+	num2 = 20;
+	printf("the number of pi is  :%d\n", *pci);
 	
-	pi = 4;
-    pci = 3145;	
-	printf("the number of pi is  :%d\n", pi);
-	printf("the number of pi is  :%d\n", pci);
 	 char a[] = "asad"; // the difference between '  ' for char and  "  " is for string. 
 	
 	while (scanf("%d", &enterNum) ==1)
