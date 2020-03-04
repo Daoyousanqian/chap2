@@ -1,6 +1,9 @@
+int neg(int b);
+int ex_number = 1121;
 int incrementPlus1(int a){
-
-	return a+1;
+        int num;
+        num = neg(a); 
+	return num+1;
 
 
 }

@@ -23,8 +23,8 @@ int const *const cpci ;  // both do not allow;
 
 
 
-int incrementPlus1(int a);
-int neg(int a);
+extern int incrementPlus1(int a);
+extern int neg(int a);
 
 int main(void){
 	
@@ -40,8 +40,10 @@ int main(void){
 	pci = &num2;
 //	cpi = &num3;     // it will hint some error assignment of read-only variable ‘cpi’
 //	cpci = &num4;   //  assignment of read-only variable ‘cpci’
-
- // ****************************** the example of int const * cpi *******************************************//  
+    
+	
+	
+ // ****************************** the example of int const * pci *******************************************//  
 	printf("the number of pi is  :%d\n", *pi);
 	printf("the number of pci is  :%d\n", *pci);
 	pci = &num3;
@@ -58,6 +60,11 @@ int main(void){
 //	printf("the number of cpi is  :%d\n", *cpi);
 
 // ****************************** the example of int const * cpi *******************************************//	
+	
+//*****************************to test the extern variable ***************************************************//
+	extern int ex_number;
+	printf("the external number is: %d\n", ex_number);
+	
 	
 	 char a[] = "asad"; // the difference between '  ' for char and  "  " is for string. 
 	
