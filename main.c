@@ -36,6 +36,7 @@ int main(void){
 	int num3 = 12;
 	int num4 = 13;
 	int num5 = 14;
+	char ch1;
 	pi = &num1;
 	pci = &num2;
 //	cpi = &num3;     // it will hint some error assignment of read-only variable ‘cpi’
@@ -66,7 +67,32 @@ int main(void){
 	printf("the external number is: %d\n", ex_number);
 	
 	
-	 char a[] = "asad"; // the difference between '  ' for char and  "  " is for string. 
+	char a[] = "asad"; // the difference between '  ' for char and  "  " is for string. 
+	
+// here is used to test********** while******** break  ****continue **********************8//
+
+	while((ch1 = getchar()) != EOF){
+		if (ch1 < '0' || ch1 > '9' )
+		{
+			printf("the input is: %c\n", ch1);
+			continue;
+		}
+		else{
+			
+			printf("the input is a 0 to 9 : %c\n", ch1);
+			break;
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	while (scanf("%d", &enterNum) ==1)
 	{
